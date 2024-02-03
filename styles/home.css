@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Italiana&family=Poppins&display=swap');
+
+/*font-family: 'Bebas Neue', sans-serif;
+font-family: 'Italiana', sans-serif;
+font-family: 'Poppins', sans-serif;
+*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #ffffff;
+    font-size: 14px;
+}
+
+header{
+    width: 100%;
+}
+
+
+/**section 1 of header starts here **/
+
+.header-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1.3rem;
+    height: 5rem;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.header-logo{
+    display: flex;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header-logo h1{
+    letter-spacing: 4px;
+    color:rgba(37, 110, 228, 1);
+    margin-left: 10px;
+    font-size: 1.6rem;
+}
+
+.header-search{
+    border: 1px solid rgb(234, 234, 234);
+    padding: .4rem;
+    width: 25rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-search input{
+    background: none;
+    padding: .3rem;
+    width: 20rem;
+    border: none;
+    outline: none;
+}
+.header-search input::placeholder{
+    color: #acacac;
+    text-transform: capitalize;
+}
+
+.header-route{
+    display: flex;
+    gap: 40px;
+}
+
+.header-route select{
+    border: none;
+    background: none;
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+}
+.header-route div:nth-child(2){
+    display: flex;
+    align-items: center;
+}
+
+.header-route div:nth-child(2) label{
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-btn{
+    border: 1px solid rgba(37, 110, 228, 1);
+    color: rgba(37, 110, 228, 1) ;
+    width: 8rem;
+    padding: .4rem;
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.signup-btn{
+    background:rgba(37, 110, 228, 1);
+    width: 8rem;
+    padding: .4rem;
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    border: none;
+    color: #f6f6f6;
+    cursor: pointer;
+}
+
+/**burger display*/
+.burger{
+    display: none;
+}
+
+/*section1 ends here */
+
+/*main section starts here*/
+
+main{
+    width: 100%;
+    height: 74vh;
+}
+
+.nav-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 10px;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(160, 158, 158);
+}
+
+.nav-links a:hover{
+    color:rgba(37, 110, 228, 1) ;
+}
+
+.banner{
+    background:linear-gradient(0deg, rgba(197, 220, 244, 0.89), rgba(196, 222, 244, 0.872)), url(../images/header-images/2.png);
+    width: 100%;
+    height: 68vh;
+    position: relative;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.banner-image{
+    position: absolute;
+    top: 0;
+    left: 10;
+    right: -8rem;
+}
+
+.banner-writeup{
+    width: 60%;
+    padding: 5rem;
+}
+.banner-writeup span{
+    font-size: 3rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.banner-writeup span strong{
+ font-style: italic;
+ color:rgba(37, 110, 228, 1) ;
+}
+
+.banner-writeup p{
+    font-family: 'Poppins', sans-serif;
+    width: 40rem;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.banner-writeup button{
+    background:rgba(37, 110, 228, 1);
+    width: 8rem;
+    padding: .4rem;
+    font-size: .9rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 4px;
+    border: none;
+    color: #f6f6f6;
+    cursor: pointer;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+@media (max-width: 768px) {
+    .header-route{
+        display: none;
+    }
+
+    .burger{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        /* margin-left: -28rem; */
+    }
+
+    .burger div{
+        width: 29px;
+        height: 4px;
+        background-color: rgb(58, 58, 58);
+    }
+
+    .header-route{
+        display: block;
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 10rem;
+        z-index: 2;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        background: #d0d0d0;
+    }
+}
